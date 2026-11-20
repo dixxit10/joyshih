@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{history.scrollRestoration="manual"}catch(e){}if(!location.hash)window.scrollTo(0,0)</script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bookmania — Joy Shih</title>
+<meta name="description" content="I turned the history of Bookman into a timeline you can explore and a type specimen you can make your own.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Caudex&family=Inter:wght@400;700;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="st/stories.css">
+<link rel="stylesheet" href="cs/case.css">
+<link rel="stylesheet" href="st/mobile-nav.css">
+<script src="st/mobile-nav.js" defer></script>
+<link rel="stylesheet" href="cs/bookmania.css">
+</head>
+<body class="light">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="stars" aria-hidden="true"></canvas>
+<header class="bar">
+ <a class="brand" href="index.html" aria-label="Joy Shih, home">Joy Shih<i aria-hidden="true">✦</i></a>
+ <nav id="site-nav" aria-label="Main"><a class="nl" href="index.html#team">What I Bring</a><a class="nl on" href="work.html">Visual</a><a class="nl" href="lab.html">Lab</a><a class="nl" href="stories.html">Thinking</a><a class="nl" href="index.html#about">About</a></nav>
+ <a class="btn btn-sm" href="index.html#contact">Contact</a>
+ <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+</header>
+<main id="main">
+<article class="art bk-project" id="bookmania" aria-labelledby="bookmania-title">
+ <a class="back" href="work.html"><svg class="arw" viewBox="0 0 44 16" aria-hidden="true"><path d="M0 8h40M33 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg> All work</a>
+ <header class="a-head">
+  <p class="kicker">03 Selected work · Type history</p>
+  <h1 id="bookmania-title">Bookmania</h1>
+  <p class="a-dek">I turned the history of Bookman into a timeline you can explore and a type specimen you can make your own.</p>
+ </header>
+ <div class="bk-board bk-opening" id="bk-opening">
+  <div class="bk-opening-scene">
+   <img class="bk-board-base" src="cs/bk-opening-live-1858.svg" data-era="1858" data-lane="-1" alt="" aria-hidden="true" width="1920" height="1080">
+   <img class="bk-board-base" src="cs/bk-opening-live-2011.svg" data-era="2011" data-lane="0" alt="Bookmania · 2011" width="1920" height="1080">
+   <img class="bk-board-base" src="cs/bk-opening-live-1949.svg" data-era="1949" data-lane="1" alt="" aria-hidden="true" width="1920" height="1080">
+  </div>
+  <img class="bk-opening-fixed" src="cs/bk-opening-fixed.svg" alt="The Bookmania Story" width="1920" height="1080">
+  <div class="bk-opening-choices" role="group" aria-label="Preview an era"><button type="button" data-year="2011" data-title="Bookmania" aria-pressed="true">2011</button><button type="button" data-year="1949" data-title="Photo Typesetting" aria-pressed="false">1949</button><button type="button" data-year="1900" data-title="Bookman Old Style" aria-pressed="false">1900</button><button type="button" data-year="1884" data-title="Hot Metal Typesetting" aria-pressed="false">1884</button><button type="button" data-year="1858" data-title="Antique Old Style" aria-pressed="false">1858</button></div>
+  <a class="bk-opening-explore" href="#bk-2011">Explore <span aria-hidden="true">↗</span></a>
+ </div>
+ <section class="bk-chapter bk-maker" id="bk-2011" aria-labelledby="bk-heading-2011">
+  <header class="bk-chapter-head">
+   <h2 id="bk-heading-2011"><span>2011</span> Bookmania in use</h2>
+   <p>Pair your words with an image from the timeline.</p>
+  </header>
+  <div class="bk-maker-grid">
+   <div class="bk-maker-controls">
+    <label for="bk-custom-text">Your text</label>
+    <textarea id="bk-custom-text" maxlength="60" rows="2">Bookman Old Style</textarea>
+    <fieldset class="bk-colour-options">
+     <legend>Text colour</legend>
+     <label><input type="radio" name="bk-ink" value="coral"><span style="--swatch:#e3694e">Coral orange</span></label>
+     <label><input type="radio" name="bk-ink" value="white"><span style="--swatch:#ffffff">White</span></label>
+     <label><input type="radio" name="bk-ink" value="charcoal" checked><span style="--swatch:#2c2a29">Charcoal</span></label>
+    </fieldset>
+    <fieldset class="bk-product-options">
+     <legend>Object</legend>
+     <label><input type="radio" name="bk-product" value="disk" checked><span>CD Disk</span></label>
+     <label><input type="radio" name="bk-product" value="bookmark"><span>Bookmark</span></label>
+     <label><input type="radio" name="bk-product" value="stamp"><span>Stamp</span></label>
+    </fieldset>
+    <fieldset class="bk-layout-options">
+     <legend>Design</legend>
+     <label><input type="radio" name="bk-layout" value="1900" checked><span>1900</span></label>
+     <label><input type="radio" name="bk-layout" value="1884"><span>1884</span></label>
+     <label><input type="radio" name="bk-layout" value="1949"><span>1949</span></label>
+    </fieldset>
+   </div>
+   <figure class="bk-maker-preview" aria-label="Live product preview">
+    <div class="bk-mockup" data-product="disk" data-ink="charcoal" data-layout="1900">
+     <div class="bk-product-face">
+      <img class="bk-product-shell" src="cs/bk-eps-disk-1900.webp" alt="1900 design on a CD Disk">
+      <svg class="bk-print" viewBox="0 0 1427 1427" role="img" aria-label="Bookman Old Style" xmlns="http://www.w3.org/2000/svg">
+       <text class="bk-print-text" text-anchor="start" font-size="153.264"><tspan x="411.75" y="1114.9499999999998">Bookman</tspan><tspan x="418.04999999999995" y="1242.75">Old Style</tspan></text>
+      </svg>
+     </div>
+    </div>
+    <figcaption>CD Disk</figcaption>
+   </figure>
+  </div>
+ </section>
+ 
+ <section class="bk-chapter" id="bk-1949" aria-labelledby="bk-heading-1949">
+  <header class="bk-chapter-head">
+   <h2 id="bk-heading-1949"><span>1949</span> Photo Typesetting</h2>
+   <p>Phototypesetters projected characters onto photographic paper or film.</p>
+  </header>
+  <div class="bk-board" data-animation="cs/bk-animated-1949.svg">
+   <img class="bk-board-base" src="cs/bk-clean-1949.svg" alt="Photo Typesetting chapter artwork" width="1440" height="810" loading="lazy">
+   <p class="bk-board-copy bk-board-copy-1949"><span class="sr">Phototypesetting is a method of setting type. It uses photography to make columns of type on a scroll of photographic paper. The first phototypesetters quickly project light through a film negative of an individual character in a font, then through a lens that magnifies or reduces the size of the character onto photographic paper or film, which is collected on a spool in a light-proof canister.</span><span aria-hidden="true">Phototypesetting is a method of setting type. It uses photography to make columns of type on a scroll of photographic paper. The first phototypesetters quickly project light through a film negative of an individual character in a font, then through a lens that magnifies or reduces the size of the character onto photographic paper or film, which is collected on a spool in a light-proof canister.</span></p>
+  </div>
+ </section>
+ <section class="bk-chapter" id="bk-1900" aria-labelledby="bk-heading-1900">
+  <header class="bk-chapter-head">
+   <h2 id="bk-heading-1900"><span>1900</span> Bookman Old Style</h2>
+   <p>Around the turn of the century, Bartlett Oldstyle became ATF’s Bookman Oldstyle.</p>
+  </header>
+  <div class="bk-board" data-animation="cs/bk-animated-1900.svg">
+   <img class="bk-board-base" src="cs/bk-clean-1900.svg" alt="Bookman Old Style chapter artwork" width="1440" height="810" loading="lazy">
+   
+  </div>
+ </section>
+ <section class="bk-chapter" id="bk-1884" aria-labelledby="bk-heading-1884">
+  <header class="bk-chapter-head">
+   <h2 id="bk-heading-1884"><span>1884</span> Hot Metal Typesetting</h2>
+   <p>Metal typesetting changed how printers composed and reproduced type.</p>
+  </header>
+  <div class="bk-board" data-animation="cs/bk-animated-1884.svg">
+   <img class="bk-board-base" src="cs/bk-clean-1884.svg" alt="Hot Metal Typesetting chapter artwork" width="1440" height="810" loading="lazy">
+   <p class="bk-board-copy bk-board-copy-1884"><span class="sr">Hot metal typesetting was developed in the late nineteenth century as a development of conventional cast metal type. The technology had several advantages: it reduced labor since type sorts did not need to be slotted into position manually, and each casting created crisp new type for each printing job. In the case of Linotype machines, each line was cast as a robust continuous block which was useful for rapid newspaper printing.</span><span aria-hidden="true">Hot metal typesetting was developed in the late nineteenth century as a development of conventional cast metal type. The technology had several advantages: it reduced labor since type sorts did not need to be slotted into position manually, and each casting created crisp new type for each printing job. In the case of Linotype machines, each line was cast as a robust continuous block which was useful for rapid newspaper printing.</span></p>
+  </div>
+ </section>
+ <section class="bk-chapter" id="bk-1858" aria-labelledby="bk-heading-1858">
+  <header class="bk-chapter-head">
+   <h2 id="bk-heading-1858"><span>1858</span> Antique Old Style</h2>
+   <p>Alexander Phemister’s Antique Old Style was an early ancestor of Bookman.</p>
+  </header>
+  <div class="bk-board" data-animation="cs/bk-animated-1858.svg">
+   <img class="bk-board-base" src="cs/bk-clean-1858.svg" alt="Antique Old Style chapter artwork" width="1440" height="810" loading="lazy">
+   
+  </div>
+ </section>
+ <aside class="takeaway">
+  <p class="kicker">Reflection</p>
+  <p>I wanted the history to feel like something you could discover for yourself. I gave each era a different interaction, from a typewriter-style reveal in the hot-metal chapter to a spinning phototypesetting disc. The live specimen lets readers end the timeline by trying the type themselves.</p>
+ </aside>
+ <script type="application/json" id="bk-print-geometry">{"stamp-1900":{"width":453,"height":558,"size":67.14,"first":406.335,"second":475.79999999999995,"firstX":63.3897,"secondX":66.78},"stamp-1884":{"width":453,"height":558,"size":67.14,"first":406.335,"second":475.79999999999995,"firstX":60.424999999999955,"secondX":63.81499999999994},"stamp-1949":{"width":453,"height":558,"size":67.14,"first":406.335,"second":475.79999999999995,"firstX":64.91499999999996,"secondX":68.30500000000006},"bookmark-1900":{"width":694,"height":1494,"size":42.59295,"first":1216.4250000000002,"second":1260.4859999999999,"firstX":243.036,"secondX":245.1885},"bookmark-1884":{"width":695,"height":1494,"size":42.59295,"first":1216.4250000000002,"second":1260.4859999999999,"firstX":243.317,"secondX":245.46949999999993},"bookmark-1949":{"width":695,"height":1494,"size":42.59295,"first":1216.4250000000002,"second":1260.4859999999999,"firstX":244.00999999999976,"secondX":246.15499999999997},"disk-1900":{"width":1427,"height":1427,"size":123.60000000000001,"first":1114.9499999999998,"second":1242.75,"firstX":411.75,"secondX":418.04999999999995},"disk-1884":{"width":1427,"height":1427,"size":123.60000000000001,"first":1114.9499999999998,"second":1242.75,"firstX":411.89999999999986,"secondX":418.1999999999998},"disk-1949":{"width":1428,"height":1427,"size":123.60000000000001,"first":1114.9499999999998,"second":1242.75,"firstX":412.64999999999964,"secondX":418.9500000000003}}</script>
+</article>
+<nav class="pn" aria-label="Project navigation"><a href="case-dessert.html"><span class="kicker">Previous Project</span><b>Dessert Shop Rebrand</b></a><a class="nx" href="case-brand.html"><span class="kicker">Next Project</span><b>Brand Concept</b></a></nav>
+</main>
+<script src="cs/bookmania.js" defer></script>
+<footer class="foot"><div class="ft"><span>© 2026 Joy Shih. Designed and built with care.</span><nav aria-label="Footer"><a href="index.html">Home</a><a href="work.html">Visual</a><a href="lab.html">Lab</a><a href="stories.html">Thinking</a><a href="https://www.linkedin.com/in/joy-shih-3771a3178" target="_blank" rel="noopener">LinkedIn</a></nav></div></footer>
+<script src="st/stories.js"></script>
+</body>
+</html>
