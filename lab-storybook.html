@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>try{history.scrollRestoration="manual"}catch(e){}if(!location.hash)window.scrollTo(0,0)</script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Brainwaves & Illustration — Joy Shih</title>
+<meta name="description" content="EEG research on illustration complexity and an interactive Fractal Dither Tool.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;700;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="st/stories.css">
+<link rel="stylesheet" href="st/project-link.css">
+<link rel="stylesheet" href="st/mobile-nav.css">
+<script src="st/mobile-nav.js" defer></script>
+</head>
+<body class="reading-page">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="stars" aria-hidden="true"></canvas>
+<header class="bar">
+ <a class="brand" href="index.html" aria-label="Joy Shih, home">Joy Shih<i aria-hidden="true">✦</i></a>
+ <nav id="site-nav" aria-label="Main"><a class="nl" href="index.html#team">What I Bring</a><a class="nl" href="work.html">Visual</a><a class="nl" href="lab.html">Lab</a><a class="nl" href="stories.html">Thinking</a><a class="nl" href="index.html#about">About</a></nav>
+ <a class="btn btn-sm" href="index.html#contact">Contact</a>
+ <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+</header>
+
+<main id="main" class="wrap bloom-page">
+ <a class="back" href="lab.html"><svg class="arw" viewBox="0 0 44 16" aria-hidden="true"><path d="M0 8h40M33 1l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Back to Lab</a>
+ <header class="a-head">
+  <div class="sh-top"><span class="sh-no">01</span><span class="kicker">Brainwaves &amp; Illustration</span><span class="sh-rule"></span></div>
+  <h1>Brainwaves &amp; Illustration</h1>
+  <p class="a-dek">I studied how illustration complexity shapes the coloring experience. The Fractal Dither Tool applies that way of measuring complexity to photos you can turn into patterns.</p>
+  <dl class="a-facts"><div><dt>Scope</dt><dd>EEG research · Generative illustration</dd></div><div><dt>Methods</dt><dd>Wearable EEG · Box-counting</dd></div><div><dt>Interaction</dt><dd>Photo dithering and halftone</dd></div><div><dt>Status</dt><dd>Exploratory prototype</dd></div></dl>
+ </header>
+ <section class="bloom-method" aria-labelledby="bloom-method-title">
+  <h2 id="bloom-method-title">Measuring the complexity of a drawing</h2>
+  <div class="bloom-method-grid">
+   <div>
+    <p>For my master's research, I wanted to see whether the amount of detail in a drawing changes the experience of coloring it. I designed 36 geometric and figurative mandalas, keeping each motif recognizable while varying its linework.</p>
+    <p>I used box counting in ImageJ to estimate fractal dimension (D). The method counts how many grid squares touch the linework at several scales. I used the resulting estimates to group the drawings by complexity.</p>
+   </div>
+   <figure><img src="st/bloom-box-counting.svg" alt="The same fractal on a coarse and a fine grid. More squares contain part of the fractal on the finer grid." loading="lazy"><figcaption>Box counting at two grid sizes</figcaption></figure>
+  </div>
+  <div class="bloom-method-grid bloom-sample-study">
+   <div>
+    <h3>What the study found</h3>
+    <p>In a coloring experiment with 120 fifth- and sixth-grade students, the high-complexity group had higher headset-reported relaxation scores than the low and medium groups. Attention scores showed no significant difference across the three groups. Medium complexity was preferred overall.</p>
+   </div>
+   <fieldset class="bloom-rabbit-source">
+    <legend>Compare rabbit mandalas</legend>
+    <p>Switch levels to see what changes in the outline and surrounding details.</p>
+    <div class="bloom-rabbit-options">
+     <label><input type="radio" name="rabbit-complexity" value="low" checked> Low</label>
+     <label><input type="radio" name="rabbit-complexity" value="medium"> Medium</label>
+     <label><input type="radio" name="rabbit-complexity" value="high"> High</label>
+    </div>
+    <div class="bloom-rabbit-view">
+     <img class="rabbit-low" src="st/bloom-rabbit.svg" alt="Low complexity: paired rabbit outlines with open space.">
+     <img class="rabbit-medium" src="st/bloom-rabbit.svg" alt="Medium complexity: curved lines fill the space around the rabbits.">
+     <img class="rabbit-high" src="st/bloom-rabbit.svg" alt="High complexity: floral motifs add detail around the rabbits.">
+    </div>
+   </fieldset>
+  </div>
+ </section>
+ <div class="bloom-publication">
+  <p class="kicker">Journal publication</p>
+  <p><a href="https://doi.org/10.17265/2161-6248/2017.10.001">Investigating the Impact of Coloring Experience on Young Adults Through Brainwave Variations and Image Preferences</a></p>
+  <p>I co-authored this 2017 journal article with Cheng-Hung Wang. It reports a separate EEG study on coloring in young adults.</p>
+ </div>
+ <section class="dither-tool" aria-labelledby="dither-title">
+  <h2 id="dither-title">Fractal Dither Tool</h2>
+  <div class="dither-intro">
+   <p>In the study, I measured D to group finished drawings. Here, you can use the same idea to shape a pattern. Choose a dither or halftone effect for the flower photo and watch the estimated D update. The Low, Medium, and High controls adjust brightness toward the study's reference ranges.</p>
+   <p>The original study tested mandala coloring. The effects of viewing these photo patterns remain untested, and the browser's D estimates have yet to be calibrated against the ImageJ measurements.</p>
+  </div>
+  <iframe src="fractal-dither-tool/index.html" title="Fractal Dither Tool" sandbox="allow-scripts" loading="lazy"></iframe>
+ </section>
+ 
+</main>
+<footer class="foot"><div class="ft"><span>© 2026 Joy Shih. Designed and built with care.</span><nav aria-label="Footer"><a href="index.html">Home</a><a href="work.html">Visual</a><a href="lab.html">Lab</a><a href="stories.html">Thinking</a><a href="https://www.linkedin.com/in/joy-shih-3771a3178" target="_blank" rel="noopener">LinkedIn</a></nav></div></footer>
+<script src="st/stories.js"></script>
+</body>
+</html>
