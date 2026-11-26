@@ -1,0 +1,1 @@
+(()=>{const h=document.getElementById('cups3d');const go=()=>{try{if(window.CUPS3D)CUPS3D(h,'',()=>h.classList.add('live'))}catch(e){}};new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();const s=document.createElement('script');s.src='cs/cups3d.js';s.onload=go;document.body.appendChild(s)},{rootMargin:'600px 0px'}).observe(h)})();
